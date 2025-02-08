@@ -1,0 +1,51 @@
+baseURL = 'https://planetdeimos.github.io/blog/'
+languageCode = 'en-us'
+theme = "nightfall"
+
+[menu]
+  [[menu.header]]
+    name = "blog"
+    weight = 0
+    url = "blog"
+  [[menu.header]]
+    name = "about"
+    weight = 1
+    url = "about"
+
+[params]
+user = "hello"
+hostname = "world"
+  [params.author]
+    name = "The Inner Machinations Of My Mind"  # Website and RSS feed author
+    email = "email@example.com"  # RSS feed email address
+  [params.styles]
+    color = "orange"
+
+readingTime = false  # Show reading time on post page
+published = true  # Show published data on post page
+
+[[params.social]]
+key = 0
+name = "Github"
+url = "https://github.com/planetdeimos"
+target = "_blank"
+aria = "GitHub Profile"
+
+[[params.social]]
+key = 2
+name = "Twitter"
+url = "https://twitter.com/planetdeimos"
+target = "_blank"
+aria = "I will never call it anything other then twitter"
+
+[[params.social]]
+key = 1
+name = "."
+url = "https://youtube.com/watch?v=1z-pVZiRjac"
+aria = "words"
+
+#[[params.social]]
+#key = 3
+#name = "email"
+#url = "mailto:email@example.com"
+#aria = "My e-Mail Address"
