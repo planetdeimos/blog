@@ -1,4 +1,4 @@
-baseURL = 'https://planetdeimos.github.io/blog/'
+baseURL = 'https://planetdeimos.github.io/'
 languageCode = 'en-us'
 theme = "nightfall"
 

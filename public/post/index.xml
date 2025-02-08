@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on </title>
-    <link>http://localhost:1313/blog/post/</link>
+    <link>http://localhost:1313/post/</link>
     <description>Recent content in Posts on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>email@example.com (The Inner Machinations Of My Mind)</managingEditor>
     <webMaster>email@example.com (The Inner Machinations Of My Mind)</webMaster>
     <lastBuildDate>Fri, 07 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>And you may find yourself behind the wheel of a large automobile</title>
-      <link>http://localhost:1313/blog/post/howdidigethere/</link>
+      <link>http://localhost:1313/post/howdidigethere/</link>
       <pubDate>Fri, 07 Feb 2025 00:00:00 +0000</pubDate><author>email@example.com (The Inner Machinations Of My Mind)</author>
-      <guid>http://localhost:1313/blog/post/howdidigethere/</guid>
+      <guid>http://localhost:1313/post/howdidigethere/</guid>
       <description>&lt;p&gt;Talking Heads said it best:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;And you may find yourself living in a shotgun shack&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;And you may find yourself in another part of the world&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;And you may find yourself behind the wheel of a large automobile&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;And you may find yourself in a beautiful house, with a beautiful wife&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;And you may ask yourself, Well, how did I get here?&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://live.staticflickr.com/46/142643561_9a02a2bd3d_b.jpg&#34; alt=&#34;car steering wheel&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
