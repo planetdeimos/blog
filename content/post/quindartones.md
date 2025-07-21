@@ -44,7 +44,7 @@ This project is crude in nature, after all it was implemented in about 2 hours f
 
 After some brainstorming on how to make this work with any radio, regardless of vendor it became quickly clear the simplest method to be able to deploy rapidly was to use a common Arduino Uno, button, and speaker.
 
-When the button is pressed down and held, the first 2,545 Hz tone is played. The circuit sits silent until the button is released, when the second 2,475 Hz tone for 250ms is played by the speaker. 
+When the button is pressed down and held, the first 2,545 Hz tone is played. The circuit sits silent until the button is released, when the second 2,475 Hz tone for 250ms is played by the speaker.
 
 All I had to do from a hardware perspective is to wire up a button and a speaker to two pins on the Arduino. That's it - that the whole circuit.
 
@@ -85,5 +85,5 @@ Below is audio captured by family several states away, I'm the operator and real
 
 Anytime I can learn something new or grow it's a win for me both professionally and personally, this project, albeit implemented very fast and not with the highest workmanship standards was an excellent introduction into a sect of space history I was not very familiar with and reminded me once again the value of being able to rapidly prototype and test electronics - a very useful skill to maintain as an engineer!
 
-Ad Astra! 
+Ad Astra!
 (to the stars!)
