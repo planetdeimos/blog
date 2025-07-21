@@ -6,7 +6,7 @@ aliases = []
 author = "Admin"
 +++
 
-Houston, Apollo 11. Comm Check.
+Eagle, Houston. Comm Check.
 
 ### Origins
 
@@ -17,7 +17,7 @@ Today is July 20th, 2025. 56 years ago today, humanity took its first baby steps
 If you're interested in spaceflight in any capacity, you might be familiar with the "Quindar Tones". But what are quindar tones, you may ask? Even as someone who is thoroughly entrenched in spaceflight history and facts, I personally had no clue was they were called. Only that the [CapCom](https://en.wikipedia.org/wiki/Flight_controller) used them as part of the communications between the spacecraft during the mission. The day before Apollo 11's 56th landing anniversary, I overheard the Marshall Spaceflight Center (MSFC) club NN4SA operating with them. I was instantly mesmerized and decided to work on an implementation.
 
 ### What Are Quindar Tones?
-I wont bore you with the details, here's the [wikipedia page](https://en.wikipedia.org/wiki/Quindar_tones), but at a high level.
+I wont bore you with the details, here's the [Wikipedia Page](https://en.wikipedia.org/wiki/Quindar_tones) if you want to dig into the subject, but at a high level:
 "the Quindar system, named after its manufacturer, Quindar Electronics, Inc., used two tones, both being pure sine waves that were 250ms long. The "intro tone" was generated at 2,525 Hz and signaled the "key down" key-press of the PTT button and unmuted the audio. The "outro tone" was slightly lower at 2,475 Hz and signalled the release of the PTT button and muted the audio."
 
 
@@ -84,7 +84,6 @@ Below is audio captured by family several states away, I'm the operator and real
 
 ### Conclusion
 
-Anytime I can learn something new or grow it's a win for me both professionally and personally, this project, albeit implemented very fast and not with the highest workmanship standards was an excellent introduction into a sect of space history I was not very familiar with and reminded me once again the value of being able to rapidly prototype and test electronics - a very useful skill to maintain as an engineer!
+Anytime I can learn something new or grow it's a win for me both professionally and personally, this project, albeit implemented very fast and not with the highest workmanship standards was an excellent introduction into a sect of space history I was not very familiar with and reminded me once again the value of being able to rapidly prototype and test electronics - a very useful skill to maintain as an engineer.
 
-Ad Astra!
-(to the stars!)
+Ad Astra.
