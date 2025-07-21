@@ -14,7 +14,7 @@ Eagle, Houston. Comm Check.
 
 Today is July 20th, 2025. 56 years ago today, humanity took its first baby steps on an incredible journey to another world. Reaching the moon was no small task. Set out following President John F. Kennedy's challenge to the nation, NASA accomplished what no other nation to date has done. In my spare time, I participate in an Amateur Radio program called [NASA On The Air](https://nasaontheair.wordpress.com/). This organization participates in radio activations to commemorate milestones in American and Human spaceflight. Including all of the Apollo Missions.
 
-If you're interested in spaceflight in any capacity, you might be familiar with the "Quindar Tones". But what are quindar tones, you may ask? Even as someone who is thoroughly entrenched in spaceflight history and obscure mission and vehicle facts and data, I personally had no clue what their official name was. Only that [CAPCOM](https://en.wikipedia.org/wiki/Flight_controller#Spacecraft_communicator_(CAPCOM)) used them as part of the communications between Mission Control Houston and the spacecraft during the mission. The day before Apollo 11's 56th landing anniversary, I overheard the Marshall Spaceflight Center (MSFC) club NN4SA operating with a variant of Quindar Tones. As a space nerd, I was instantly mesmerized and decided to work on an implementation for our own activation the following day.
+If you're interested in spaceflight in any capacity, you might be familiar with the "Quindar Tones". But what are quindar tones, you may ask? Even as someone who is thoroughly entrenched in spaceflight history, akin to that of a walking rolodex of spaceflight facts and knowledge - I personally had no clue what their official name was. Only that [CAPCOM](https://en.wikipedia.org/wiki/Flight_controller#Spacecraft_communicator_(CAPCOM)) used them as part of the communications between Mission Control Houston and the spacecraft during the mission. The day before Apollo 11's 56th landing anniversary, I overheard the Marshall Spaceflight Center (MSFC) club NN4SA operating with a variant of Quindar Tones. As a space nerd, I was instantly mesmerized and decided to work on an implementation for our own activation the following day.
 
 ### What Are Quindar Tones?
 I wont bore you with the details, here's the [Wikipedia Page](https://en.wikipedia.org/wiki/Quindar_tones) if you want to really dig into the subject, but at a high level:
@@ -43,7 +43,7 @@ This project is crude in nature, after all it was implemented in about 2 hours f
 
 ![Fritzing Diagram](https://i.imgur.com/G7QYIRl.png)
 
-After some brainstorming on how to make this work with any radio, regardless of vendor it became quickly clear the simplest method to be able to deploy rapidly was to use a common Arduino Uno, button, and speaker.
+After some brainstorming on how to make this work with any radio, regardless of vendor, it quickly became clear the simplest method to be able to deploy this timely was to use a common Arduino Uno, simple button to trigger the microcontroller, and a speaker to play the tones themselves.
 
 When the button is pressed down and held, the first 2545 Hz tone is played. The circuit sits silent until the button is released, when the second 2475 Hz tone for 250ms is played by the speaker.
 
