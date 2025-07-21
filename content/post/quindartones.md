@@ -31,7 +31,7 @@ Interestingly others including the Apollo Hardware restoration legend CuriousMar
 
 
 ### Implementation
-This project has to be able to accomplish 4 things:
+This project has 4  major objectives:
 > 1. Transmit a 2,525 Hz tone for 250ms
 > 2. Wait a period of time while voice traffic is passed
 > 3. Transmit a 2,475 Hz tone for 250ms
