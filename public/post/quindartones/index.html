@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>
+Quindar Tones - The Famous NASA Beep | The Inner Machinations Of My Mind
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.148.1">
+
+
+<link rel="canonical" href="http://localhost:1313/post/quindartones/" >
+
+
+
+
+<link href="/css/style.min.3651cb95c72ce13c6a5cbb9a059fc4da0014d2580cb70d8f507f4bb73954293a.css" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="http://localhost:1313/">
+                <span>hello@world ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="http://localhost:1313/about" title="" >
+                        ~/about</a>
+                </li>
+                
+                <li>
+                    <a href="http://localhost:1313/blog" title="" >
+                        ~/blog</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+    <h1>Quindar Tones - The Famous NASA Beep</h1>
+    
+    
+    <section class="postMetadata">
+        <dl>
+            
+            
+            
+            
+                <dt>published</dt>
+                
+                <dd><time datetime="2025-07-20">July 20, 2025</time></dd>
+            
+            
+                <dt>reading time</dt>
+                <dd>5 minutes</dd>
+            
+        </dl>
+    </section>
+    
+    <div>
+        <p>Houston, Apollo 11. Comm Check.</p>
+<h3 id="origins">Origins</h3>
+<p><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fblog.sciencemuseum.org.uk%2Fwp-content%2Fuploads%2F2019%2F07%2FApollo-11-astronaut-Buzz-Aldrin-stands-next-to-a-flag-on-the-moon-on-July-20-1969.-NASA-960x600.jpg&amp;f=1&amp;nofb=1&amp;ipt=1ec5e6eb4c51dd717d5a49cb8902c99a1e689c7b6b93e27793190bb2df62fab8" alt="Apollo 11 On the Moon"></p>
+<p>Today is July 20th, 2025. 56 years ago today, humanity took its first baby steps on an incredible journey to another world. Reaching the moon was no small task. Set out following President John F. Kennedy&rsquo;s challenge to the nation, NASA accomplished what no other nation to date has done. In my spare time, I participate in an Amateur Radio program called <a href="https://nasaontheair.wordpress.com/">NASA On The Air</a>. This organization participates in radio activations to commemorate milestones in American and Human spaceflight. Including all of the Apollo Missions.</p>
+<p>If you&rsquo;re interested in spaceflight in any capacity, you might be familiar with the &ldquo;Quindar Tones&rdquo;. But what are quindar tones, you may ask? Even as someone who is thoroughly entrenched in spaceflight history and facts, I personally had no clue was they were called. Only that the <a href="https://en.wikipedia.org/wiki/Flight_controller">CapCom</a> used them as part of the communications between the spacecraft during the mission. The day before Apollo 11&rsquo;s 56th landing anniversary, I overheard the Marshall Spaceflight Center (MSFC) club NN4SA operating with them. I was instantly mesmerized and decided to work on an implementation.</p>
+<h3 id="what-are-quindar-tones">What Are Quindar Tones?</h3>
+<p>I wont bore you with the details, here&rsquo;s the <a href="https://en.wikipedia.org/wiki/Quindar_tones">wikipedia page</a>, but at a high level.
+&ldquo;the Quindar system, named after its manufacturer, Quindar Electronics, Inc., used two tones, both being pure sine waves that were 250ms long. The &ldquo;intro tone&rdquo; was generated at 2,525 Hz and signaled the &ldquo;key down&rdquo; key-press of the PTT button and unmuted the audio. The &ldquo;outro tone&rdquo; was slightly lower at 2,475 Hz and signalled the release of the PTT button and muted the audio.&rdquo;</p>
+<h3 id="short-timelines-no-standards">Short Timelines, No Standards</h3>
+<p>Anyone&rsquo;s who worked in the Audio world will tell you, there are very few standards. Most things are proprietary or at the very least don&rsquo;t play well together. Of course there are exceptions such as the XLR, 1/4&quot;, 1/8&quot; interfaces, but in general it&rsquo;s messy. The same is true for the radio world. In order to implement this properly, I needed to hack into the microphone circuity. To artificially add in a delay between when the two tones are transmitted and when the voice traffic is passed. Unfortunately due to the nature of having to implement this in under 24 hours and have no time to procure a sacrificial microphone capable of working with the Elecraft K3 we would use the following day, much more crude implementation would have to occur.</p>
+<p>Interestingly others including the Apollo Hardware restoration legend CuriousMarc has done this in the past, worth a watch!</p>
+<h3 id="implementation">Implementation</h3>
+<p>This project has to be able to accomplish 4 things:</p>
+<blockquote>
+<ol>
+<li>Transmit a 2,525 Hz tone for 250ms</li>
+<li>Wait a period of time while voice traffic is passed</li>
+<li>Transmit a 2,475 Hz tone for 250ms</li>
+<li>Be repeatable and reliable</li>
+</ol></blockquote>
+<p>Given all the timeline and hardware constraints, I opted to use an external solution that would not directly interface with the radio&rsquo;s PTT (push to talk) capabilities.
+This project is crude in nature, after all it was implemented in about 2 hours from what I had laying around in my parts bin :)</p>
+<p><img src="https://i.imgur.com/G7QYIRl.png" alt="Fritzing Diagram"></p>
+<p>After some brainstorming on how to make this work with any radio, regardless of vendor it became quickly clear the simplest method to be able to deploy rapidly was to use a common Arduino Uno, button, and speaker.</p>
+<p>When the button is pressed down and held, the first 2,545 Hz tone is played. The circuit sits silent until the button is released, when the second 2,475 Hz tone for 250ms is played by the speaker.</p>
+<p>All I had to do from a hardware perspective is to wire up a button and a speaker to two pins on the Arduino. That&rsquo;s it - that the whole circuit.</p>
+<p>The Arduino was programmed with the normal IDE, full code used can be found at my <a href="https://github.com/planetdeimos/QuindarTones">Github Repo</a></p>
+<p>After some quick bench testing and troubleshooting and adding of debounce code, we were ready to deploy our system to celebrate Apollo 11!</p>
+<h3 id="operations">Operations</h3>
+<p>After getting setup at the N1KSC shack, the final setup for operations looked like the following:</p>
+<p><img src="https://i.imgur.com/gB4YZ6V.jpeg" alt="Shack Setup Diagram"></p>
+<p>I ended up using two microphones. One for actual voice communications and the other to trigger the tones. In a quick lookabout my parts bin, I had a Kenwood style microphone branded TYT that I found abandoned at a hamfest. Googling Kenwood pinout diagrams, I was able to connect to the PTT pins to allow for a simple and ergonomic solution to triggering the arduino.</p>
+<p>The mess of red/orange wires is to the speaker, which was temporarily taped near the top of the transmitter microphone.</p>
+<p><img src="https://i.imgur.com/AJoSOHx.jpeg" alt="Speaker Mic Photo"></p>
+<p>This ended up with a unique operating condition. Having to hold two microphones simultaneously to talk. I followed the following workflow:</p>
+<blockquote>
+<ol>
+<li>Hold Down Radio PTT</li>
+<li>Press and Hold Tone Button</li>
+<li>Speak Into Transmit Microphone</li>
+<li>Conclude Transmission by Releasing Tone Button</li>
+<li>Release Radio PTT</li>
+</ol></blockquote>
+<p>It took a couple tries to get things going smoothly, but in the end, there were some very solid results!</p>
+<p>Below is audio captured by family several states away, I&rsquo;m the operator and really sets an interesting precedence how interesting this simple setup can provide an incredible layer of immersion into the event and get people interested in space history!
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/kstWFDS7sEQ?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>Anytime I can learn something new or grow it&rsquo;s a win for me both professionally and personally, this project, albeit implemented very fast and not with the highest workmanship standards was an excellent introduction into a sect of space history I was not very familiar with and reminded me once again the value of being able to rapidly prototype and test electronics - a very useful skill to maintain as an engineer!</p>
+<p>Ad Astra!
+(to the stars!)</p>
+
+    </div>
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2025 The Inner Machinations Of My Mind, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> 
+            
+             
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

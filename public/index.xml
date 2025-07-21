@@ -8,8 +8,15 @@
     <language>en-us</language>
     <managingEditor>email@example.com (The Inner Machinations Of My Mind)</managingEditor>
     <webMaster>email@example.com (The Inner Machinations Of My Mind)</webMaster>
-    <lastBuildDate>Fri, 07 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quindar Tones - The Famous NASA Beep</title>
+      <link>http://localhost:1313/post/quindartones/</link>
+      <pubDate>Sun, 20 Jul 2025 00:00:00 +0000</pubDate><author>email@example.com (The Inner Machinations Of My Mind)</author>
+      <guid>http://localhost:1313/post/quindartones/</guid>
+      <description>&lt;p&gt;Houston, Apollo 11. Comm Check.&lt;/p&gt;&#xA;&lt;h3 id=&#34;origins&#34;&gt;Origins&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fblog.sciencemuseum.org.uk%2Fwp-content%2Fuploads%2F2019%2F07%2FApollo-11-astronaut-Buzz-Aldrin-stands-next-to-a-flag-on-the-moon-on-July-20-1969.-NASA-960x600.jpg&amp;amp;f=1&amp;amp;nofb=1&amp;amp;ipt=1ec5e6eb4c51dd717d5a49cb8902c99a1e689c7b6b93e27793190bb2df62fab8&#34; alt=&#34;Apollo 11 On the Moon&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Today is July 20th, 2025. 56 years ago today, humanity took its first baby steps on an incredible journey to another world. Reaching the moon was no small task. Set out following President John F. Kennedy&amp;rsquo;s challenge to the nation, NASA accomplished what no other nation to date has done. In my spare time, I participate in an Amateur Radio program called &lt;a href=&#34;https://nasaontheair.wordpress.com/&#34;&gt;NASA On The Air&lt;/a&gt;. This organization participates in radio activations to commemorate milestones in American and Human spaceflight. Including all of the Apollo Missions.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>And you may find yourself behind the wheel of a large automobile</title>
       <link>http://localhost:1313/post/howdidigethere/</link>
