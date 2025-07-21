@@ -1,6 +1,6 @@
 +++
 date = '2025-07-20'
-title = 'Quindar Tones - The Famous NASA Beep You Probably Didn't Know The Name Of'
+title = 'Quindar Tones - The Famous NASA Beep'
 description = ""
 aliases = []
 author = "Admin"
