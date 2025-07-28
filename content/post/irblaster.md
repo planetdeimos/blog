@@ -1,12 +1,12 @@
 +++
-date = '2025-05-1'
-title = 'Hacking a Holmes Stand Fan to Work with HomeAssistant'
+date = '2025-05-01'
+title = 'Hacking a Holmes Tower Fan to Work with HomeAssistant'
 description = ""
 aliases = []
 author = "Admin"
 +++
 ### Background
-Some time ago I bought a cheap vertical stand fan for my project room from a big box store. No thrils, no IOT connectivity, just a cheap and simple fan that redirects air from a hallway into a room. 
+Some time ago I bought a cheap vertical tower fan for my project room from a big box store. No thrils, no built in IOT connectivity, just a cheap and simple fan that redirects air from a hallway into a room bustling with electronics! 
 
 Most of the time, when I purchase some appliance, there's some long term strategy and thought it put into place regarding if it'll be integrated into my smart home - usually a google search seeing there is an integration. In this case however no such planning was made.
 As part of my quest to develop both a secure and automated smart home, I wanted to integrate this into my HomeAssistant ecosystem without having to purchase a new product. 
