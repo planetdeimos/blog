@@ -14,7 +14,15 @@ As part of my quest to develop both a secure and automated smart home, I wanted 
 It's a 40" stand fan, Item: 12863, Model: 32510453
 
 It quickly became very obvious that modifing the fan to do what I wanted to do was going to be a challege. The controls on the fan itself are not physical buttons, but utilize capacitive touch, making a servo impractical.
-Next I looked at mounting an IR LED to the fan body itself, writing a simple arduino script to control didnt see to big of a deal, but I wanted to use ESPHome with HomeAssistant, and determined that to be both buggy and impractical.
+Next I looked at mounting an IR LED to the fan body itself, writing a simple arduino script to control didnt see to big of a deal, but I wanted to use ESPHome with HomeAssistant, and determined that to be both buggy and impractical. Digging through my parts bin, I found a long abandonded universal remote control. I extracted the IR LED and attempted to use that as a priminate remote control of sorts.
+
 There was also the concern of powering the microcontroller that would have to be mounted onto the fan body itself, cable managed, and a seperate dc power supply run to interface with the controls. 
 
-I then noticed a forgotten remote control stashed away in the back of the injected molded fan housing. I quickly zeroed in on using this for my project. The remote control wasnt used by me at this point, so modifying it caused no heartbreak
+I then noticed the largely forgotten remote control stashed away in the back of the injected molded fan housing. I quickly zeroed in on using this for my project. The remote control wasnt used by me at this point, so modifying it caused no heartbreak or loss in capabilities.
+![Picture of OEM Remote](https://i.imgur.com/Y1FlCxr.jpeg)
+
+Next, I took apart the remote housing to quickly identify how the circuit was put together, and to see if there was any possibility of hyjacking it to control the fan.
+![OEM Remote Expanded View](https://i.imgur.com/zH0sJvq.jpeg)
+
+The device is powered off of the common CR2032 Lithium battery, which operates at 3v nominally, this was excellent news, as it meant I could easily tap into the 3.3V rail on the ESP32 and would not require and non-native voltage regulation or voltage dividers!
+
