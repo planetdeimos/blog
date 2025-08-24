@@ -24,9 +24,11 @@ I then noticed the largely forgotten remote control stashed away in the back of 
 Next, I took apart the remote housing to quickly identify how the circuit was put together, and to see if there was any possibility of hyjacking it to control the fan.
 ![OEM Remote Expanded View](https://i.imgur.com/zH0sJvq.jpeg)
 
-The device is powered off of the common CR2032 Lithium battery, which operates at 3v nominally, this was excellent news, as it meant I could easily tap into the 3.3V rail on the ESP32 and would not require and non-native voltage regulation or voltage dividers! Thankfully, the designers of the PCB had some forethought, and left an availible pad on the design (C1) that could easily be tapped into the power the device. One quick set of bodge wires later and a quick hookup to a regulated powersupply, and we're in buisness to get to the main event - hacking the controller!
+The device is powered off of the common CR2032 Lithium battery, which operates at 3V nominally, this was excellent news, as it meant I could easily tap into the 3.3V rail on the ESP32 and would not require and non-native voltage regulation or voltage dividers! Thankfully, the designers of the PCB had some forethought, and left an availible pad on the design (C1) that could easily be tapped into the power the device. One quick set of bodge wires later and a quick hookup to a regulated powersupply, and we're in buisness to get to the main event - hacking the controller!
 ![External Power Supply](https://i.imgur.com/hfkfBWK.jpeg)
 
 
 Next, it was time to understand the logic of how the device operates. At its core, when the buttons on the remote are pressed, the remote IC sends a series of IR pulses out to command the stand fan. In our case of project requirements, minimum viable product was to simply power on the fan to start circulating air in its default state. Because this is a very simple and low cost product, the entire PCB was a handful of surface mount components and buttons, with a singular IC and a handful of resistors on the opposite side.
+![Probing IC](https://i.imgur.com/ZkkZcR9.jpeg)
+
 
